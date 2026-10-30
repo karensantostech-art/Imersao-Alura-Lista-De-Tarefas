@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="purple">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarefas do dia</title>
+  <!-- Link para o arquivo de estilos (CSS) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Seletor de Cores de Tema -->
+    <div class="theme-selector">
+      <span class="theme-label">Tema:</span>
+      <div class="theme-options">
+        <button type="button" class="theme-btn active" data-color="purple" title="Tema Roxo" style="--btn-color: #667eea;"></button>
+        <button type="button" class="theme-btn" data-color="blue" title="Tema Azul" style="--btn-color: #0072ff;"></button>
+        <button type="button" class="theme-btn" data-color="green" title="Tema Verde" style="--btn-color: #10b981;"></button>
+        <button type="button" class="theme-btn" data-color="orange" title="Tema Laranja" style="--btn-color: #f97316;"></button>
+        <button type="button" class="theme-btn" data-color="pink" title="Tema Rosa" style="--btn-color: #ec4899;"></button>
+      </div>
+    </div>
+
+    <!-- Cabeçalho com o novo título -->
+    <header class="header">
+      <h1>Tarefas do dia</h1>
+      <p class="subtitle">Organize suas atividades diárias com facilidade</p>
+    </header>
+
+    <!-- Barra de Progresso em Porcentagem (%) -->
+    <div class="progress-section">
+      <div class="progress-info">
+        <span>Progresso das tarefas</span>
+        <strong id="progress-percentage">0%</strong>
+      </div>
+      <div class="progress-bar-bg">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Mensagem de Parabéns (exibida quando 100% das tarefas são concluídas) -->
+    <div id="congrats-message" class="congrats-card hidden">
+      <span class="congrats-icon">🎉</span>
+      <div class="congrats-content">
+        <strong>Parabéns!</strong>
+        <p>Você concluiu todas as tarefas do dia!</p>
+      </div>
+    </div>
+
+    <!-- Formulário para adicionar nova tarefa -->
+    <form id="todo-form" class="todo-form">
+      <input 
+        type="text" 
+        id="task-input" 
+        placeholder="Digite o que você precisa fazer..." 
+        autocomplete="off"
+        required
+      >
+      <button type="submit" id="add-btn">
+        <span>+ Adicionar</span>
+      </button>
+    </form>
+
+    <!-- Resumo das tarefas e botão de limpeza -->
+    <div class="task-summary">
+      <span id="task-count">Nenhuma tarefa cadastrada</span>
+      <button id="clear-all-btn" class="btn-clear hidden">Limpar concluídas</button>
+    </div>
+
+    <!-- Lista onde os itens serão adicionados dinamicamente pelo JavaScript -->
+    <ul id="task-list" class="task-list">
+      <!-- As tarefas serão inseridas aqui via JavaScript -->
+    </ul>
+  </div>
+
+  <!-- Link para o arquivo de lógica (JavaScript) -->
+  <script src="app.js"></script>
+</body>
+</html>

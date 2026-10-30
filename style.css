@@ -1,0 +1,398 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS, FONTES E VARIÁVEIS DE TEMA (CSS VARIABLES)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Tema padrão (Roxo) */
+:root, [data-theme="purple"] {
+  --theme-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --theme-primary: #667eea;
+  --theme-primary-hover: #5568d3;
+  --theme-glow: rgba(102, 126, 234, 0.25);
+}
+
+/* Tema Azul */
+[data-theme="blue"] {
+  --theme-gradient: linear-gradient(135deg, #0072ff 0%, #00c6ff 100%);
+  --theme-primary: #0072ff;
+  --theme-primary-hover: #005ecb;
+  --theme-glow: rgba(0, 114, 255, 0.25);
+}
+
+/* Tema Verde */
+[data-theme="green"] {
+  --theme-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --theme-primary: #10b981;
+  --theme-primary-hover: #059669;
+  --theme-glow: rgba(16, 185, 129, 0.25);
+}
+
+/* Tema Laranja */
+[data-theme="orange"] {
+  --theme-gradient: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  --theme-primary: #f97316;
+  --theme-primary-hover: #ea580c;
+  --theme-glow: rgba(249, 115, 22, 0.25);
+}
+
+/* Tema Rosa */
+[data-theme="pink"] {
+  --theme-gradient: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  --theme-primary: #ec4899;
+  --theme-primary-hover: #db2777;
+  --theme-glow: rgba(236, 72, 153, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--theme-gradient);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+  transition: background 0.4s ease;
+}
+
+/* ==========================================================================
+   CONTAINER PRINCIPAL
+   ========================================================================== */
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  padding: 28px 24px;
+}
+
+/* ==========================================================================
+   SELETOR DE CORES DO TEMA
+   ========================================================================== */
+.theme-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.theme-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #718096;
+}
+
+.theme-options {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background-color: var(--btn-color);
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 0 1px #cbd5e0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.15);
+}
+
+.theme-btn.active {
+  box-shadow: 0 0 0 2px #2d3748;
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   CABEÇALHO
+   ========================================================================== */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.header .subtitle {
+  font-size: 0.88rem;
+  color: #718096;
+}
+
+/* ==========================================================================
+   SEÇÃO DO MEDIDOR DE PROGRESSO (%)
+   ========================================================================== */
+.progress-section {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.progress-info strong {
+  color: var(--theme-primary);
+  font-size: 0.95rem;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 10px;
+  background-color: #edf2f7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--theme-primary);
+  border-radius: 999px;
+  transition: width 0.4s ease, background 0.3s ease;
+}
+
+/* ==========================================================================
+   MENSAGEM DE PARABÉNS (AO CONCLUIR 100%)
+   ========================================================================== */
+.congrats-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border: 1px solid #a3d9b0;
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  animation: popIn 0.35s ease-out;
+}
+
+.congrats-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.congrats-content strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #10491e;
+}
+
+.congrats-content p {
+  font-size: 0.83rem;
+  margin: 0;
+  color: #1e6331;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================================
+   FORMULÁRIO DE ENTRADA
+   ========================================================================== */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.todo-form input:focus {
+  border-color: var(--theme-primary);
+  box-shadow: 0 0 0 3px var(--theme-glow);
+}
+
+.todo-form button {
+  background-color: var(--theme-primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.todo-form button:hover {
+  background-color: var(--theme-primary-hover);
+}
+
+.todo-form button:active {
+  transform: scale(0.97);
+}
+
+/* ==========================================================================
+   RESUMO E CONTADOR DE TAREFAS
+   ========================================================================== */
+.task-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.btn-clear {
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn-clear:hover {
+  color: #c53030;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   LISTA DE TAREFAS
+   ========================================================================== */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Estilização da barra de rolagem */
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+/* Item individual da lista */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: #edf2f7;
+}
+
+/* Conteúdo da tarefa (checkbox + texto) */
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--theme-primary);
+}
+
+.task-text {
+  font-size: 0.95rem;
+  color: #2d3748;
+  word-break: break-word;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+/* Tarefa Concluída */
+.task-item.completed {
+  background-color: #f0fff4;
+  border-color: #c6f6d5;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+/* Botão de Excluir */
+.btn-delete {
+  background-color: transparent;
+  color: #e53e3e;
+  border: none;
+  font-size: 1.3rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}
+
+/* Mensagem quando a lista está vazia */
+.empty-state {
+  text-align: center;
+  padding: 24px 0;
+  color: #a0aec0;
+  font-size: 0.95rem;
+}
