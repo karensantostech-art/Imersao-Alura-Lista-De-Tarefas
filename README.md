@@ -106,8 +106,8 @@ Clone o repositório com o comando:
 
 **Via Git:**
 ```bash
-git clone https://github.com/karensantostech-art/Imersao-Alura-Calculadora-Aprimorada.git
-cd Imersao-Alura-Calculadora-Aprimorada
+git clone https://github.com/karensantostech-art/Imersao-Alura-Lista-De-Tarefas.git
+cd Imersao-Alura-Lista-De-Tarefas
 ```
 *Ou baixe o arquivo ZIP diretamente pelo botão verde **Code > Download ZIP** no GitHub e descompacte a pasta no seu computador.*
 
