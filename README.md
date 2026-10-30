@@ -18,9 +18,7 @@
 
 ## 📖 Sobre o Projeto
 
-O **Tarefas do Dia** foi concebido e desenvolvido com foco no aprendizado de programação e desenvolvimento de software, demonstrando na prática a integração da **tríade fundamental da web: HTML5, CSS3 e JavaScript puro (Vanilla JS)**.
-
-Todo o projeto foi estruturado para ser de fácil compreensão, sem a necessidade de instalar frameworks pesados ou ferramentas complexas (como Node.js, Webpack ou Vite). Basta abrir o arquivo no navegador e usar!
+O **Tarefas do Dia** foi desenvolvido com foco no aprendizado de programação e desenvolvimento de software utilizando ferramentas de IA, no caso o Google Antigravity, que utilizou **HTML5, CSS3 e JavaScript puro (Vanilla JS)** para a criação da interface visual personalizável, e ser de fato um sistema de Gerenciamento de Tarefas.
 
 ---
 
@@ -40,7 +38,7 @@ Todo o projeto foi estruturado para ser de fácil compreensão, sem a necessidad
 ## 🗂️ Estrutura de Arquivos
 
 ```plaintext
-Imersao_Alura_DEV_IA_Desafio_3/
+Imersao-Alura-Lista-De-Tarefas/
 ├── index.html     # Estrutura visual e marcação semântica
 ├── style.css      # Estilos visuais, variáveis de tema (CSS Variables) e animações
 ├── app.js         # Lógica da aplicação, manipulação do DOM e LocalStorage
@@ -51,7 +49,7 @@ Imersao_Alura_DEV_IA_Desafio_3/
 
 ## 🧠 Conceitos e Aprendizados Aplicados
 
-Este projeto reúne conceitos essenciais para desenvolvedores no primeiro ano de estudos:
+Este projeto reúne conceitos essenciais de desenvolvimento de software:
 
 ### 1. Separação de Responsabilidades
 - **HTML (`index.html`)**: Define *o que* está na tela (estrutura e semântica).
@@ -127,17 +125,3 @@ Todas as funcionalidades do projeto foram submetidas a uma suíte de testes auto
 
 ---
 
-## 💡 Próximos Desafios (Sugestões para Praticar)
-
-Se você quiser continuar expandindo o projeto para praticar ainda mais:
-
-1. **Filtros de Exibição:** Adicionar botões para filtrar as tarefas em *"Todas"*, *"Pendentes"* e *"Concluídas"*.
-2. **Edição de Tarefas:** Permitir dar duplo clique no texto de uma tarefa para editá-la.
-3. **Data e Hora de Criação:** Exibir uma data limite (*due date*) ou a hora em que a tarefa foi adicionada.
-4. **Arrastar e Soltar (Drag & Drop):** Permitir reorganizar a ordem das tarefas arrastando-as com a API de Drag & Drop do HTML5.
-
----
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para fins educacionais e de estudo na **Imersão DEV IA**. Sinta-se à vontade para utilizar, modificar e expandir este código em seus estudos!
