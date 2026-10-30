@@ -96,13 +96,22 @@ Permitem alternar temas instantaneamente alterando apenas o atributo `data-theme
 
 ## 🚀 Como Executar o Projeto
 
-Não é necessário instalar nenhum programa adicional. Siga os passos:
+### Pré-requisitos
 
-1. Baixe ou abra a pasta do projeto em seu computador:
-   ```plaintext
-   c:\Users\Familia Santos\OneDrive\Área de Trabalho\Imersao_Alura_DEV_IA_Desafio_3
-   ```
-2. Dê um **duplo clique no arquivo `index.html`**.
+* Ter o **Git** instalado (opcional, para clonar o repositório).
+* Não é necessário instalar nenhum programa adicional. Siga os passos:
+
+1. Abra o terminal da sua máquina (Prompt de Comando, PowerShell ou Terminal do Linux/Mac).
+Clone o repositório com o comando:
+
+**Via Git:**
+```bash
+git clone https://github.com/karensantostech-art/Imersao-Alura-Calculadora-Aprimorada.git
+cd Imersao-Alura-Calculadora-Aprimorada
+```
+*Ou baixe o arquivo ZIP diretamente pelo botão verde **Code > Download ZIP** no GitHub e descompacte a pasta no seu computador.*
+
+2. Abra o arquivo index.html em qualquer navegador (dando duplo clique no arquivo).
 3. O projeto abrirá imediatamente no seu navegador padrão (Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, etc.).
 
 ---
